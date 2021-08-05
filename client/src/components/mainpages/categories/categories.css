@@ -1,0 +1,63 @@
+.categories{
+    max-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+}
+.categories form{
+    width: 290px;
+    margin-bottom: 20px;
+}
+.categories label{
+    display: block;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.categories input, button{
+    height: 35px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #555;
+}
+.categories input{
+    width: 210px;
+}
+.categories button{
+    width: 70px;
+    color: white;
+    margin-left: 10px;
+}
+.create {
+    background-color: #007bff;
+}
+.edit{
+    background-color: #28a745;
+}
+.delete{
+    background-color: #dc3545;
+}
+.categories .row{
+    min-width: 30.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+.categories .row p{
+    font-size: 1.5rem;
+}
+.col{
+    margin-left: 5.5rem;
+}
+@media screen and (max-width: 768px) {
+    .categories{
+        flex-wrap: wrap;
+    }
+    .col{
+        margin-left: 0;
+    }
+}

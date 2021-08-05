@@ -1,0 +1,167 @@
+header {
+    grid-column: col-start 1 / col-end 12;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}
+.header__wrapper {
+    background-color: #0ab3a3;
+    padding: 10px 13px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 3fr;
+    grid-gap: 10px;
+}
+.header__menu {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    padding: 7px;
+    font-size: 20px;
+    
+}
+.header__category-content {
+    font-size: 14px;
+}
+.header__form {
+    position: relative; 
+}
+.header__form form {
+    
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
+}
+.header__form form .header__form-input {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+}
+.header__form form .header__form-search {
+    background-color: white;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+    width: 39px;
+    height: 36px;
+    border-radius: 5px;
+}
+.header__logo {
+    place-self: center;
+}
+.header__logo-text{
+    line-height: 0;
+    color: white;
+    font-family: "Gamja Flower",cursive;
+}
+.header__user {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    gap: 5px;
+}
+.header__user-cart-link{
+    font-size: 22px;
+    margin-right: 20px;
+}
+.header__user-cart-icon span{
+    background: crimson;
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    top:-5px;
+    right: -7px;
+    padding:5px 7px;
+    font-size: 10px;
+}
+.header__user-cart-link,
+.header__user-account-icon{
+    position: relative;
+    width: min-content;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+    
+}
+.header__user-account{
+    margin-right: 3.5rem;
+    padding: 0 .1rem;
+    position: relative;
+    cursor: pointer;
+    margin-top: .4rem;
+}
+.header__user-account-icon{
+    font-size: 25px;
+}
+
+/* Mobile and Tablet */
+@media (max-width: 1023px){
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+    .header__wrapper{
+        display: flex; 
+        justify-content: space-between;
+    }
+    .header__user{
+        justify-content: space-around;
+    }
+}
+.header__user--account__dropdown{
+    position: absolute;
+  list-style-type: none;
+  background-color: #fff;
+  top: 100%;
+  right: 0;
+  border-radius: 0.5rem;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.5s;
+  z-index: 3;
+  width: 15rem;
+} 
+.header__user--account__dropdown a{
+    text-align: center;
+}
+.header__user--account__dropdown li{
+    color: #000;
+    font-size: 17px;
+    border-bottom:1px solid #ccc ;
+    
+}
+.header__user--account__dropdown li:hover{
+    background-color: #bbb;
+    border-radius: 0.5rem;
+}
+@media screen and (max-width: 430px) {
+    .header__user--account__dropdown {
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+.openAccount{
+    transform: scaleY(1);
+}

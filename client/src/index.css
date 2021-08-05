@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* .App{
+  max-width: 1230px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-shadow: 0 0 35px #eee;
+} */
+.App {
+  display: grid;
+  grid-template-columns: repeat(12,[col-start] 1fr [col-end]);
+  background-color: #f4f4f4;
+  position: relative;
+}
+a{
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+button{
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+.main {
+    display: grid;
+    grid-column:  2 / 12;
+    grid-template-columns: repeat(4,  1fr );
+    transition: all 0.5s;
+    margin-top: 7.5rem;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    grid-column:  2 /  11;
+    transform: translateX(0) !important;
+  }
+}
+.main.active-menu {
+  transform: translateX(9.3%);
+}
+
+/* ------Header----------- */
+@import url('./components/headers/header.css');
+
+/* Lading page */
+@import url('./components/mainpages/layout/landing.css');
+/* Footer */
+@import url('./components/Footer/footer.css');
+/* Products */
+@import url('./components/mainpages/Products/Products.css');
+/* Detail Product */
+@import url('./components/mainpages/detailProduct/detailProduct.css');
+/* Aside */
+@import url('./components/mainpages/utils/Aside/aside.css');
+/* Auth */
+@import url('./components/mainpages/auth/auth.css');
+/* Cart */
+@import url('./components/mainpages/cart/cart.css');
+/* History */
+@import url('./components/mainpages/history/oderHistory.css');
+/* Categories */
+@import url('./components/mainpages/categories/categories.css');
+/* Create Product */
+@import url('./components/mainpages/createProduct/createProduct.css');
+/* Notification */
+@import url('./components/mainpages/utils/Notification/notification.css');

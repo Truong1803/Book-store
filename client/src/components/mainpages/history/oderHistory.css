@@ -1,0 +1,49 @@
+.history-page{
+    grid-column: 1/-1;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+}
+.history-page h2{
+    font-size: calc(1.6rem + .8vw);
+    border-bottom: 1px solid #aaa;
+}
+.history-page h4{
+    font-size: calc(1rem + .3vw);
+    margin: 1.5rem 0 .5rem;
+}
+.history-page h2,h4{
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+.history-page table{
+    margin: auto;
+    width: 100%;
+    font-size: 2rem;
+}
+.history-page table,th,tr,td{
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+th, td{
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
+}
+table a{
+    color: rgb(3, 165, 206);
+}
+
+.history-page img{
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+}
+@media screen and (max-width: 768px){
+    .history-page table{
+        font-size: 1rem;
+    }
+}

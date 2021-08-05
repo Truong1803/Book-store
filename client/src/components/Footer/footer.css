@@ -1,0 +1,216 @@
+#footer {
+  grid-column: col-start 1 / col-end 12;
+  padding: calc(1rem + 1vw);
+  padding-bottom: 0;
+  background-color: #333333;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, min-content);
+}
+
+#footer .email {
+  grid-column: 1 / 5;
+  justify-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .email {
+    justify-self: start;
+  }
+}
+
+#footer .email__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5vw 0;
+}
+
+@media screen and (max-width: 430px) {
+  #footer .email__form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+#footer .email__form--label {
+  color: white;
+  font-size: calc(0.9rem + 0.5vw);
+  text-transform: uppercase;
+  margin-right: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .email__form--label {
+    font-size: calc(1.2rem + 0.5vw);
+  }
+}
+
+#footer .email__form--input {
+  outline: none;
+  border: none;
+  padding: calc(0.5rem + 0.4vw);
+  margin-right: 1vw;
+  font-size: calc(1rem + 0.3vw);
+  width: 40vw;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .email__form--input {
+    font-size: calc(1rem + 0.5vw);
+    padding: calc(0.8rem + 0.5vw);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #footer .email__form--input {
+    margin: 2vw 0;
+    width: 80vw;
+  }
+}
+
+#footer .email__form--button {
+  text-transform: uppercase;
+  padding: calc(0.5rem + 0.4vw) 1vw;
+  background-color: #0ab3a3;
+  outline: none;
+  color: white;
+  border: none;
+  font-size: calc(1rem + 0.3vw);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .email__form--button {
+    font-size: calc(1rem + 0.5vw);
+    padding: calc(0.8rem + 0.5vw);
+  }
+}
+
+#footer .intro-wrapper {
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #444444;
+  border-bottom: 1px solid #444444;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .intro-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  #footer .intro-wrapper .intro:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #footer .intro-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+#footer .intro-wrapper .intro {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #444444;
+  padding: 2vw;
+}
+
+@media screen and (max-width: 430px) {
+  #footer .intro-wrapper .intro {
+    border-right: none;
+  }
+}
+
+#footer .intro-wrapper .intro h2 {
+  color: white;
+  margin-bottom: 2vw;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .intro-wrapper .intro h2 {
+    font-size: calc(1rem + 1vw);
+  }
+}
+
+#footer .intro-wrapper .intro__link {
+  font-size: calc(0.8rem + 0.4vw);
+  color: #8f8f8c;
+  text-decoration: none;
+  transition: all 0.4s;
+  margin: 0.7vw 0;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .intro-wrapper .intro__link {
+    font-size: calc(1rem + 0.5vw);
+  }
+}
+
+#footer .intro-wrapper .intro__link i {
+  margin-right: 1vw;
+}
+
+#footer .intro-wrapper .intro__link:hover {
+  color: #0ab3a3;
+}
+
+#footer .intro-wrapper .intro__contact--content {
+  font-size: calc(0.8rem + 0.4vw);
+  margin: 0.7vw 0;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  #footer
+    .intro-wrapper
+    .intro__contact--content {
+    font-size: calc(1rem + 0.5vw);
+  }
+}
+
+#footer
+  .intro-wrapper
+  .intro__contact--content
+  i {
+  color: white;
+  margin-right: 1vw;
+}
+
+#footer
+  .intro-wrapper
+  .intro__contact--content
+  span {
+  color: #8f8f8c;
+}
+
+#footer .intro-wrapper .intro:last-child {
+  border-right: none;
+}
+
+#footer .copyright {
+  grid-column: 1 / 5;
+  place-self: center;
+  color: #8f8f8c;
+  font-size: calc(0.8rem + 0.4vw);
+  padding: 2vw;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .copyright {
+    font-size: calc(1rem + 0.5vw);
+    padding: 3vw;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #footer .copyright {
+    padding: 4vw;
+  }
+}
+
+.follow {
+  text-align: center;
+  font-size: 4rem;
+}
