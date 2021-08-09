@@ -52,7 +52,7 @@ function CardCart({ product }) {
         className="fas fa-times"
         onClick={() => removeProduct(product._id)}
       ></i>
-      <Link to="" className="cardcart__products--img">
+      <Link to={`/detail/${product._id}`} className="cardcart__products--img">
         <img src={product.images.url} alt="Product" />
       </Link>
       <div className="cardcart__products--detail">

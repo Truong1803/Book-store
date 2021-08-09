@@ -27,9 +27,7 @@ function Header() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearch(searchItem.current.value);
-    if (search) {
-      history.push("/product");
-    }
+    history.push("/product");
   };
   const logoutUser = async () => {
     await axios.get("/user/logout");
@@ -43,19 +41,29 @@ function Header() {
     body = (
       <>
         <Link to="">
-          <li>My Account</li>
+          <li>
+            <i className="fas fa-user"></i>My Account
+          </li>
         </Link>
         <Link to="/create_product">
-          <li>Create Products</li>
+          <li>
+            <i className="fas fa-plus-circle"></i>Create Products
+          </li>
         </Link>
         <Link to="/category">
-          <li>Categories</li>
+          <li>
+            <i className="fas fa-swatchbook"></i>Categories
+          </li>
         </Link>
         <Link to="/history">
-          <li>History</li>
+          <li>
+            <i className="fas fa-history"></i>History
+          </li>
         </Link>
         <Link to="/" onClick={logoutUser}>
-          <li>Logout</li>
+          <li>
+            <i className="fas fa-sign-out-alt"></i>Logout
+          </li>
         </Link>
       </>
     );
@@ -63,20 +71,28 @@ function Header() {
     body = (
       <>
         <Link to="">
-          <li>My Account</li>
+          <li>
+            <i class="fas fa-user"></i>My Account
+          </li>
         </Link>
         <Link to="/history">
-          <li>History</li>
+          <li>
+            <i className="fas fa-history"></i>History
+          </li>
         </Link>
         <Link to="/" onClick={logoutUser}>
-          <li>Logout</li>
+          <li>
+            <i className="fas fa-sign-in-alt"></i>Logout
+          </li>
         </Link>
       </>
     );
   } else {
     body = (
       <Link to="/login">
-        <li>Login ✥ Register</li>
+        <li>
+          <i className="fas fa-sign-in-alt"></i>Login ✥ Register
+        </li>
       </Link>
     );
   }
@@ -125,7 +141,7 @@ function Header() {
 
             <div className="header__user-account" onClick={handleClickAccount}>
               <div className="header__user-account-icon">
-                <i className="fas fa-sign-in-alt"></i>
+                <i className="fas fa-caret-down"></i>
               </div>
               <ul
                 className={`header__user--account__dropdown ${
@@ -138,10 +154,7 @@ function Header() {
           </div>
         </div>
       </header>
-      <Aside
-        style_ovl={openMenu ? "active_overlay" : ""}
-        style_nav={openMenu ? "active_navpc" : ""}
-      />
+      <Aside style_nav={openMenu ? "active_navpc" : ""} />
     </>
   );
 }

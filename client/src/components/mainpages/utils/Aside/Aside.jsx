@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { GlobalState } from "../../../../GlobalState";
 import { useHistory } from "react-router";
-function Aside({ style_ovl, style_nav }) {
+function Aside({ style_nav }) {
   const state = useContext(GlobalState);
   const [categories] = state.categoriesAPI.categories;
   const [category, setCategory] = state.productsAPI.category;
@@ -10,7 +10,12 @@ function Aside({ style_ovl, style_nav }) {
   const [search, setSearch] = state.productsAPI.search;
   const history = useHistory();
   const handleCategory = (value) => {
-    setCategory(`category=${value}`);
+    setSearch("");
+    if (value !== "All Products") {
+      setCategory(`category=${value}`);
+    } else {
+      setCategory("");
+    }
     setTitleProduct(value);
   };
   const handleSubmit = (e) => {
@@ -40,6 +45,12 @@ function Aside({ style_ovl, style_nav }) {
             <Link to="/" className="nav_pc-link">
               <i className="fas fa-home"></i>
               <span>Home</span>
+            </Link>
+          </li>
+          <li onClick={() => handleCategory("All Products")}>
+            <Link to="/product" className="nav_pc-link">
+              <i className="fas fa-book"></i>
+              <span>All Products</span>
             </Link>
           </li>
         </ul>
