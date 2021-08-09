@@ -100,7 +100,7 @@ const Footer = () => {
           <h2 className="intro__contact--title">Contact us</h2>
           <div className="intro__contact--content">
             <i className="fas fa-map-marker-alt"></i>
-            <span>123 Main Street, Anytown, CA 12345 USA</span>
+            <span>423 Minh Khai, Hai Bà Trưng, Hà Nội</span>
           </div>
           <div className="intro__contact--content">
             <i className="fas fa-phone-alt"></i>
@@ -108,18 +108,24 @@ const Footer = () => {
           </div>
           <div className="intro__contact--content">
             <i className="fas fa-envelope"></i>
-            <span>support@magikcommerce.com</span>
+            <span>trinhtruong1803@gmail.com</span>
           </div>
           <div className="intro__contact--content">
             <div className="follow">
               <a href="https://www.facebook.com/" target="_blank">
-                <i class="fab fa-facebook-square"></i>
+                <i className="fab fa-facebook-square"></i>
               </a>
               <a href="https://www.instagram.com/" target="_blank">
-                <i class="fab fa-instagram-square"></i>
+                <i className="fab fa-instagram-square"></i>
               </a>
               <a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter-square"></i>
+                <i className="fab fa-twitter-square"></i>
+              </a>
+              <a
+                href="https://github.com/Truong1803?tab=repositories"
+                target="_blank"
+              >
+                <i className="fab fa-github-square"></i>
               </a>
             </div>
           </div>
