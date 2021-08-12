@@ -16,7 +16,7 @@ class APIfeature {
       /\b(gte|gt|lt|lte|regex)\b/g,
       (match) => "$" + match
     );
-
+    //console.log(queryStr);
     //    gte = greater than or equal
     //    lte = lesser than or equal
     //    lt = lesser than

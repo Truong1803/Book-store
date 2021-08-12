@@ -123,7 +123,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://github.com/Truong1803?tab=repositories"
-                target="_blank"
+                target="_blank  "
               >
                 <i className="fab fa-github-square"></i>
               </a>
