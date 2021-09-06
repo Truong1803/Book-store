@@ -109,6 +109,10 @@ header {
 
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+  .header__menu{
+    padding: 0;
+  }
+  
   .hide-on-tablet {
     display: none;
   }
@@ -149,7 +153,6 @@ header {
   font-size: 17px;
   /* border-bottom: 1px solid #ccc; */
   padding-bottom: 2rem;
-
 }
 .header__user--account__dropdown li:hover {
   /* background-color: #bbb;
@@ -157,14 +160,14 @@ header {
   color: red;
 }
 .header__user--account__dropdown i {
-    margin-right: 1.4rem;
+  margin-right: 1.4rem;
 }
-@media screen and (max-width: 430px) {
+/* @media screen and (max-width: 430px) {
   .header__user--account__dropdown {
     text-align: center;
     padding: 1rem;
   }
-}
+} */
 .openAccount {
   transform: scaleY(1);
 }
