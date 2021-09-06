@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import Cart from "./cart/Cart";
@@ -24,12 +24,12 @@ function Pages() {
         <Route path="/detail/:id" exact component={DetailProduct} />
 
         <Route path="/product" exact component={Products} />
-        <Route path="/login" exact component={isLogged ? NotFound : Login} />
-        <Route
-          path="/register"
-          exact
-          component={isLogged ? NotFound : Register}
-        />
+        <Route path="/login">
+          {isLogged ? <Redirect to="/" /> : <Login />}
+        </Route>
+        <Route path="/register">
+          {isLogged ? <Redirect to="/" /> : <Register />}
+        </Route>
         <Route
           path="/category"
           exact
